@@ -4,9 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="testBean"
-          class="ru.rinat.spring1.TestBean">
-        <constructor-arg value="Rinat"/>
+    <bean id="musicBean"
+          class="ru.rinat.spring1.JazzMusic">
     </bean>
 
 </beans>

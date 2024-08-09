@@ -41,4 +41,12 @@ public class MusicPlayer {
             System.out.println("Playing " + music.getSong());
         }
     }
+
+    public void doMyInit() {
+        System.out.println("doMyInit from MusicPlayer");
+    }
+
+    public void doMyDestroy() {
+        System.out.println("doMyDestroy from MusicPlayer");
+    }
 }

@@ -1,0 +1,1 @@
+My completed tasks from Alishev course Spring Core

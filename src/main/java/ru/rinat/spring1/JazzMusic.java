@@ -1,9 +1,22 @@
 package ru.rinat.spring1;
 
-//@Component
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Component
 public class JazzMusic implements Music {
+    List<String> songs = new ArrayList<>();
+
+    JazzMusic() {
+        songs.add("Jazz music 1");
+        songs.add("Jazz music 2");
+        songs.add("Jazz music 3");
+    }
+
     @Override
-    public String getSong() {
-        return "Summertime";
+    public List<String> getSongs() {
+        return songs;
     }
 }

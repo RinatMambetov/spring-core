@@ -2,6 +2,7 @@ package ru.rinat.spring1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -13,6 +14,11 @@ public class MusicPlayer {
     private final Music music2;
     private final Music music3;
 
+    @Value("${musicPlayer.name}")
+    private String name;
+    @Value("${musicPlayer.volume}")
+    private int volume;
+
     @Autowired
     public MusicPlayer(
             @Qualifier("classicalMusic") Music music1,
@@ -21,6 +27,14 @@ public class MusicPlayer {
         this.music1 = music1;
         this.music2 = music2;
         this.music3 = music3;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
     }
 
     String randomSong(List<String> songs) {

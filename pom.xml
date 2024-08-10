@@ -8,7 +8,7 @@
     <name>spring-app1 Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-      
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -35,6 +35,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>6.1.11</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/jakarta.annotation/jakarta.annotation-api -->
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>3.0.0</version>
         </dependency>
 
     </dependencies>

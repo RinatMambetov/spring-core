@@ -2,14 +2,12 @@ package ru.rinat.spring1;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-@Scope("prototype")
+//@Component
+//@Scope("prototype")
 //@Scope("singleton")
 public class RockMusic implements Music {
     List<String> songs = new ArrayList<>();

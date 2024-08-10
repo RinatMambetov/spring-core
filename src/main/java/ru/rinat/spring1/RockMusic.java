@@ -5,10 +5,8 @@ import jakarta.annotation.PreDestroy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
-//@Component
-//@Scope("prototype")
-//@Scope("singleton")
 public class RockMusic implements Music {
     List<String> songs = new ArrayList<>();
 
@@ -31,5 +29,10 @@ public class RockMusic implements Music {
     @PreDestroy
     void doMyDestroy() {
         System.out.println("doMyDestroy RockMusic");
+    }
+
+    @Override
+    public String getRandomSong() {
+        return songs.get(new Random().nextInt(songs.size()));
     }
 }

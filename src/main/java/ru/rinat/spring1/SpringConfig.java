@@ -4,8 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+import java.util.List;
+
 @Configuration
-//@ComponentScan("ru.rinat.spring1")
 @PropertySource("musicPlayer.properties")
 public class SpringConfig {
     @Bean
@@ -24,8 +25,13 @@ public class SpringConfig {
     }
 
     @Bean
+    public List<Music> musicList() {
+        return List.of(classicalMusic(), rockMusic(), jazzMusic());
+    }
+
+    @Bean
     public MusicPlayer musicPlayer() {
-        return new MusicPlayer(classicalMusic(), jazzMusic(), rockMusic());
+        return new MusicPlayer(musicList());
     }
 
     @Bean
